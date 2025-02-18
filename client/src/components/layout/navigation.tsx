@@ -20,8 +20,12 @@ export default function Navigation() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center">
-          <span className="text-2xl font-black bg-gradient-to-r from-primary/90 to-primary p-2 rounded-lg shadow-lg hover:shadow-primary/20 transition-all duration-300">
-            {COMPANY_INFO.name}
+          <span className="relative text-2xl font-black px-6 py-2 overflow-hidden rounded-xl group">
+            <span className="absolute inset-0 bg-gradient-to-r from-primary via-yellow-400 to-primary opacity-70 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-yellow-200 to-yellow-400 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></span>
+            <span className="relative text-background mix-blend-difference">
+              {COMPANY_INFO.name}
+            </span>
           </span>
         </Link>
 
