@@ -20,13 +20,14 @@ export default function Navigation() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center">
-          <span className="relative text-2xl font-black px-6 py-2 overflow-hidden rounded-xl group">
-            <span className="absolute inset-0 bg-gradient-to-r from-primary via-yellow-400 to-primary opacity-70 group-hover:opacity-100 transition-opacity duration-300"></span>
-            <span className="absolute inset-0 bg-gradient-to-r from-yellow-200 to-yellow-400 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></span>
-            <span className="relative text-background mix-blend-difference">
-              {COMPANY_INFO.name}
-            </span>
-          </span>
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-yellow-300 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <div className="relative px-6 py-2 bg-background rounded-lg ring-1 ring-gray-900/5 leading-none">
+              <div className="text-2xl font-black bg-gradient-to-r from-primary to-yellow-400 bg-clip-text text-transparent">
+                {COMPANY_INFO.name}
+              </div>
+            </div>
+          </div>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6">
