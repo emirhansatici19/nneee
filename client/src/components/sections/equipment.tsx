@@ -4,22 +4,9 @@ import { EQUIPMENT_DETAILS } from "@/lib/constants";
 
 export default function Equipment() {
   return (
-    <section className="py-24">
+    <section className="py-16">
       <div className="container">
-        <div className="text-center mb-16">
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4"
-          >
-            Ekipmanlarımız
-          </motion.span>
-          <h2 className="text-4xl font-bold mb-4">Modern Ekipman Parkı</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            En son teknoloji mini kepçe ekipmanları ile hizmetinizdeyiz
-          </p>
-        </div>
-
+        <h2 className="text-3xl font-bold text-center mb-12">Ekipmanlarımız</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {EQUIPMENT_DETAILS.map((item, index) => (
             <motion.div
@@ -29,17 +16,16 @@ export default function Equipment() {
               transition={{ delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <Card className="overflow-hidden">
                 <div className="aspect-video relative">
                   <img
                     src={item.image}
                     alt={item.title}
                     className="object-cover w-full h-full"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                   <p className="text-gray-600">{item.description}</p>
                 </CardContent>
               </Card>
