@@ -9,6 +9,8 @@ import Home from "@/pages/home";
 import Services from "@/pages/services";
 import Gallery from "@/pages/gallery";
 import Contact from "@/pages/contact";
+import AdminLogin from "@/pages/admin/login";
+import AdminDashboard from "@/pages/admin/dashboard";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -18,6 +20,8 @@ function Router() {
       <Route path="/services" component={Services} />
       <Route path="/gallery" component={Gallery} />
       <Route path="/contact" component={Contact} />
+      <Route path="/admin/login" component={AdminLogin} />
+      <Route path="/admin/dashboard" component={AdminDashboard} />
       <Route component={NotFound} />
     </Switch>
   );
