@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -19,8 +19,10 @@ export default function Navigation() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold text-primary">{COMPANY_INFO.name}</span>
+        <Link href="/" className="flex items-center">
+          <span className="text-2xl font-black bg-gradient-to-r from-primary/90 to-primary p-2 rounded-lg shadow-lg hover:shadow-primary/20 transition-all duration-300">
+            {COMPANY_INFO.name}
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6">
