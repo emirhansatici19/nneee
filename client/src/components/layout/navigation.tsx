@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { COMPANY_INFO } from "@/lib/constants";
+import { useQuery } from "@tanstack/react-query";
 
 const navItems = [
   { href: "/", label: "Ana Sayfa" },
@@ -15,6 +16,10 @@ const navItems = [
 export default function Navigation() {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+
+  const { data: user } = useQuery({ 
+    queryKey: ["/api/user"]
+  });
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -42,6 +47,14 @@ export default function Navigation() {
               {item.label}
             </Link>
           ))}
+          {user?.isAdmin && (
+            <Link
+              href="/admin/dashboard"
+              className="text-sm font-medium transition-colors hover:text-primary"
+            >
+              Admin Panel
+            </Link>
+          )}
         </nav>
 
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -64,6 +77,15 @@ export default function Navigation() {
                   {item.label}
                 </Link>
               ))}
+              {user?.isAdmin && (
+                <Link
+                  href="/admin/dashboard"
+                  className="text-lg font-medium transition-colors hover:text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Admin Panel
+                </Link>
+              )}
             </nav>
           </SheetContent>
         </Sheet>
