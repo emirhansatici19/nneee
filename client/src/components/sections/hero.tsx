@@ -37,8 +37,8 @@ export default function Hero() {
             <Link href="/services">
               <Button 
                 size="lg" 
-                variant="outline" 
-                className="text-lg border-white hover:bg-white/10 text-white hover:text-white"
+                variant="secondary"
+                className="text-lg bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-colors"
               >
                 Hizmetlerimiz
               </Button>
