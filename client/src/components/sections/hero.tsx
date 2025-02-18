@@ -14,7 +14,7 @@ export default function Hero() {
           filter: "brightness(0.3)",
         }}
       />
-      
+
       <div className="container relative z-10 mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,7 +35,11 @@ export default function Hero() {
               </Button>
             </Link>
             <Link href="/services">
-              <Button size="lg" variant="outline" className="text-lg text-white border-white hover:text-primary hover:border-primary">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg border-white hover:bg-white/10 text-white hover:text-white"
+              >
                 Hizmetlerimiz
               </Button>
             </Link>
