@@ -38,8 +38,7 @@ export default function Footer() {
           <div>
             <h3 className="text-primary font-bold text-lg mb-4">Çalışma Saatleri</h3>
             <ul className="space-y-2">
-              <li>Pazartesi - Cumartesi: 08:00 - 18:00</li>
-              <li>Pazar: Kapalı</li>
+              <li>Pazartesi - Pazar</li>
             </ul>
           </div>
         </div>

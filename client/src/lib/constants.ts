@@ -1,9 +1,9 @@
 export const COMPANY_INFO = {
   name: "Mini Kepçe Hizmetleri",
-  phone: "+90 555 123 4567",
-  whatsapp: "+905551234567",
-  email: "info@minikepce.com",
-  address: "İstanbul, Türkiye",
+  phone: "+90 539 353 88 65",
+  whatsapp: "+905393538865",
+  email: "deneme",
+  address: "Çorum, Türkiye",
 };
 
 export const SERVICE_AREAS = [
@@ -18,11 +18,7 @@ export const SERVICE_AREAS = [
 ];
 
 export const SERVICE_REGIONS = [
-  "İstanbul Avrupa Yakası",
-  "İstanbul Anadolu Yakası",
-  "Kocaeli",
-  "Sakarya",
-  "Yalova"
+  "Çorum"
 ];
 
 export const GALLERY_IMAGES = [
