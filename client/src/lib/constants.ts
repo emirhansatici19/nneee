@@ -58,6 +58,6 @@ export const EQUIPMENT_DETAILS = [
   {
     title: "Modern Ekipman",
     description: "Güncel teknoloji",
-    image: "https://images.unsplash.com/photo-1523848309072-c199db53f137"
+    image: "/images/modern-equipment.jpg"
   }
 ];
