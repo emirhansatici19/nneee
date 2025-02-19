@@ -21,38 +21,7 @@ export const SERVICE_REGIONS = [
   "Çorum"
 ];
 
-export const GALLERY_IMAGES = [
-  {
-    src: "/images/IMG-20250219-WA0002.jpg",
-    alt: "Mini Kepçe ve İş Kamyonu",
-    credit: "Mini Kepçe Hizmetleri"
-  },
-  {
-    src: "/images/IMG-20250219-WA0003.jpg",
-    alt: "JCB Mini Kepçe İş Başında",
-    credit: "Mini Kepçe Hizmetleri"
-  },
-  {
-    src: "/images/IMG-20250219-WA0005.jpg",
-    alt: "İstinat Duvarı Çalışması",
-    credit: "Mini Kepçe Hizmetleri"
-  },
-  {
-    src: "/images/IMG-20250219-WA0006.jpg",
-    alt: "Mini Ekskavatör Hafriyat İşlemi",
-    credit: "Mini Kepçe Hizmetleri"
-  },
-  {
-    src: "/images/IMG-20250219-WA0007.jpg",
-    alt: "Mini Ekskavatör Kanal Çalışması",
-    credit: "Mini Kepçe Hizmetleri"
-  },
-  {
-    src: "/images/IMG-20250126-WA0002(1).jpg",
-    alt: "Bahçe Düzenleme Çalışması",
-    credit: "Mini Kepçe Hizmetleri"
-  }
-];
+export const GALLERY_IMAGES = [];
 
 export const EQUIPMENT_DETAILS = [
   {
