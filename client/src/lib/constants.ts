@@ -23,24 +23,9 @@ export const SERVICE_REGIONS = [
 
 export const GALLERY_IMAGES = [
   {
-    src: "https://images.unsplash.com/photo-1624953736231-c9d91a89929b",
-    alt: "Mini Kepçe Çalışması",
-    credit: "Mathieu Stern"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1624953901718-e24ee7200b85",
-    alt: "Hafriyat İşlemi",
-    credit: "Mathieu Stern"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1513199415658-c7d42394d1e8",
-    alt: "İş Makinası",
-    credit: "Angelo Pantazis"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1501139437843-8cdee2c69805",
-    alt: "Kepçe Detay",
-    credit: "Lauren Kay"
+    src: "/images/gallery-1.jpg",
+    alt: "Mini Kepçe İş Başında",
+    credit: "Mini Kepçe Hizmetleri"
   }
 ];
 
