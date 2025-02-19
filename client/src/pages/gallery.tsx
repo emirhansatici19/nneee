@@ -26,7 +26,7 @@ export default function Gallery() {
               viewport={{ once: true }}
               className="group relative overflow-hidden rounded-lg"
             >
-              <div className="aspect-video">
+              <div className="aspect-square">
                 <img
                   src={image.src}
                   alt={image.alt}
