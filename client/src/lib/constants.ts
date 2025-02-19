@@ -23,6 +23,61 @@ export const SERVICE_REGIONS = [
 
 export const GALLERY_IMAGES = [
   {
+    src: "/images/gallery/IMG-20250219-WA0009.jpg",
+    alt: "Mini Kepçe Altyapı Çalışması",
+    credit: "Mini Kepçe Hizmetleri"
+  },
+  {
+    src: "/images/gallery/IMG-20250219-WA0010.jpg",
+    alt: "Mini Kepçe Kapalı Alan İşleri",
+    credit: "Mini Kepçe Hizmetleri"
+  },
+  {
+    src: "/images/gallery/IMG-20250219-WA0011.jpg",
+    alt: "Mini Kepçe Dar Alan Çalışması",
+    credit: "Mini Kepçe Hizmetleri"
+  },
+  {
+    src: "/images/gallery/IMG-20250219-WA0012.jpg",
+    alt: "JCB Mini Kepçe İş Başında",
+    credit: "Mini Kepçe Hizmetleri"
+  },
+  {
+    src: "/images/gallery/IMG-20250219-WA0013.jpg",
+    alt: "Mini Kepçe Nakliye Hizmeti",
+    credit: "Mini Kepçe Hizmetleri"
+  },
+  {
+    src: "/images/gallery/IMG-20250219-WA0014.jpg",
+    alt: "Mini Kepçe Peyzaj Düzenleme",
+    credit: "Mini Kepçe Hizmetleri"
+  },
+  {
+    src: "/images/gallery/IMG-20250219-WA0015.jpg",
+    alt: "Mini Kepçe Şehir İçi Çalışma",
+    credit: "Mini Kepçe Hizmetleri"
+  },
+  {
+    src: "/images/gallery/IMG-20250219-WA0016.jpg",
+    alt: "Mini Ekskavatör İle Kazı İşlemi",
+    credit: "Mini Kepçe Hizmetleri"
+  },
+  {
+    src: "/images/gallery/IMG-20250219-WA0017.jpg",
+    alt: "JCB Mini Kepçe Çalışması",
+    credit: "Mini Kepçe Hizmetleri"
+  },
+  {
+    src: "/images/gallery/IMG-20250219-WA0018.jpg",
+    alt: "Mini Kepçe İle İstinat Duvarı",
+    credit: "Mini Kepçe Hizmetleri"
+  },
+  {
+    src: "/images/gallery/IMG-20250219-WA0019.jpg",
+    alt: "Mini Kepçe Apartman Önü Çalışma",
+    credit: "Mini Kepçe Hizmetleri"
+  },
+  {
     src: "/images/gallery/IMG-20250219-WA0020.jpg",
     alt: "Mini Kepçe Kapalı Alan Hafriyat",
     credit: "Mini Kepçe Hizmetleri"
