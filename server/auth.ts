@@ -36,13 +36,13 @@ async function comparePasswords(supplied: string, stored: string) {
 
 export function setupAuth(app: Express) {
   const sessionSettings: session.SessionOptions = {
-    secret: "mini-kepce-secret-key-2024",
+    secret: process.env.SESSION_SECRET || "mini-kepce-secret-key-2024",
     resave: true,
     saveUninitialized: true,
-    //store: storage.sessionStore,
     cookie: {
-      secure: false,
-      maxAge: 1000 * 60 * 60 * 24
+      secure: process.env.NODE_ENV === 'production',
+      maxAge: 1000 * 60 * 60 * 24,
+      sameSite: 'lax'
     }
   };
 
