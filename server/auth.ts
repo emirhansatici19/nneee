@@ -4,12 +4,18 @@ import { Express } from "express";
 import session from "express-session";
 import { scrypt, randomBytes, timingSafeEqual } from "crypto";
 import { promisify } from "util";
-import { storage } from "./storage";
-import { User as SelectUser } from "@shared/schema";
+import { compareSync, hashSync } from "bcryptjs";
+//import { storage } from "./storage";
+//import { User as SelectUser } from "@shared/schema";
 
 declare global {
   namespace Express {
-    interface User extends SelectUser {}
+    interface User {
+      id: number;
+      username: string;
+      password: string;
+      isAdmin: boolean;
+    }
   }
 }
 
@@ -30,13 +36,13 @@ async function comparePasswords(supplied: string, stored: string) {
 
 export function setupAuth(app: Express) {
   const sessionSettings: session.SessionOptions = {
-    secret: "mini-kepce-secret-key-2024",  // Updated secret key
-    resave: true,  // Changed to true to ensure session is saved
-    saveUninitialized: true,  // Changed to true to ensure new sessions are saved
-    store: storage.sessionStore,
+    secret: "mini-kepce-secret-key-2024",
+    resave: true,
+    saveUninitialized: true,
+    //store: storage.sessionStore,
     cookie: {
-      secure: false,  // Set to false for development
-      maxAge: 1000 * 60 * 60 * 24  // 24 hours
+      secure: false,
+      maxAge: 1000 * 60 * 60 * 24
     }
   };
 
@@ -45,10 +51,14 @@ export function setupAuth(app: Express) {
   app.use(passport.initialize());
   app.use(passport.session());
 
+  //In-memory user storage -  This is a placeholder.  A real application would need persistent storage.
+  let users: { [username: string]: Express.User } = {};
+  let nextUserId = 1;
+
   passport.use(
     new LocalStrategy(async (username, password, done) => {
       try {
-        const user = await storage.getUserByUsername(username);
+        const user = users[username];
         if (!user || !(await comparePasswords(password, user.password))) {
           return done(null, false, { message: "Invalid username or password" });
         }
@@ -60,31 +70,30 @@ export function setupAuth(app: Express) {
   );
 
   passport.serializeUser((user, done) => done(null, user.id));
-  passport.deserializeUser(async (id: number, done) => {
-    try {
-      const user = await storage.getUser(id);
-      done(null, user);
-    } catch (error) {
-      done(error);
+  passport.deserializeUser((id: number, done) => {
+    for (const username in users){
+      if (users[username].id === id) return done(null, users[username]);
     }
+    done(null, null);
   });
 
   app.post("/api/register", async (req, res, next) => {
     try {
-      const existingUser = await storage.getUserByUsername(req.body.username);
-      if (existingUser) {
+      if (users[req.body.username]) {
         return res.status(400).send("Username already exists");
       }
 
-      const user = await storage.createUser({
-        ...req.body,
+      const newUser: Express.User = {
+        id: nextUserId++,
+        username: req.body.username,
         password: await hashPassword(req.body.password),
         isAdmin: false,
-      });
+      };
+      users[req.body.username] = newUser;
 
-      req.login(user, (err) => {
+      req.login(newUser, (err) => {
         if (err) return next(err);
-        res.status(201).json(user);
+        res.status(201).json(newUser);
       });
     } catch (error) {
       next(error);
