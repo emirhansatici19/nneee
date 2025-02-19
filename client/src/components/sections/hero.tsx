@@ -4,18 +4,14 @@ import { Link } from "wouter";
 
 export default function Hero() {
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: "url(/images/hero-background.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
           filter: "brightness(0.3)",
-          height: "100%",
-          width: "100%",
-          objectFit: "cover"
         }}
       />
 
