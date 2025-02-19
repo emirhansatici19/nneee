@@ -23,43 +23,43 @@ export const SERVICE_REGIONS = [
 
 export const GALLERY_IMAGES = [
   {
-    src: "/images/gallery/IMG-20250219-WA0028.jpg",
-    alt: "Mini Kepçe Asma Altı Peyzaj Çalışması",
+    src: "/images/gallery/IMG-20250219-WA0020.jpg",
+    alt: "Mini Kepçe Kapalı Alan Hafriyat",
     credit: "Mini Kepçe Hizmetleri"
   },
   {
-    src: "/images/gallery/IMG-20250219-WA0029.jpg",
-    alt: "JCB Mini Kepçe Site İçi Çalışma",
+    src: "/images/gallery/IMG-20250219-WA0021.jpg",
+    alt: "JCB Mini Kepçe Açık Alan",
     credit: "Mini Kepçe Hizmetleri"
   },
   {
-    src: "/images/gallery/IMG-20250219-WA0030.jpg",
-    alt: "Mini Kepçe Dar Alan Çalışması",
+    src: "/images/gallery/IMG-20250219-WA0022.jpg",
+    alt: "Mini Kepçe Parke Taşı Çalışması",
     credit: "Mini Kepçe Hizmetleri"
   },
   {
-    src: "/images/gallery/IMG-20250219-WA0031.jpg",
-    alt: "JCB Mini Kepçe Merdiven Yanı Çalışma",
+    src: "/images/gallery/IMG-20250219-WA0023.jpg",
+    alt: "Mini Kepçe Hafriyat İşlemi",
     credit: "Mini Kepçe Hizmetleri"
   },
   {
-    src: "/images/gallery/IMG-20250219-WA0032.jpg",
-    alt: "Mini Kepçe Kapalı Alan Çalışması",
+    src: "/images/gallery/IMG-20250219-WA0024.jpg",
+    alt: "Mini Kepçe Site İçi Hafriyat",
     credit: "Mini Kepçe Hizmetleri"
   },
   {
-    src: "/images/gallery/IMG-20250219-WA0033.jpg",
-    alt: "Mini Kepçe ve Ekskavatör Çalışması",
+    src: "/images/gallery/IMG-20250219-WA0025.jpg",
+    alt: "JCB Mini Kepçe Yol Düzenleme",
     credit: "Mini Kepçe Hizmetleri"
   },
   {
-    src: "/images/gallery/IMG-20250219-WA0034.jpg",
-    alt: "Mini Kepçe Toprak Hafriyat İşlemi",
+    src: "/images/gallery/IMG-20250219-WA0026.jpg",
+    alt: "Mini Kepçe Dar Alan",
     credit: "Mini Kepçe Hizmetleri"
   },
   {
-    src: "/images/gallery/IMG-20250219-WA0035.jpg",
-    alt: "Mini Kepçe Peyzaj Düzenleme",
+    src: "/images/gallery/IMG-20250219-WA0027.jpg",
+    alt: "Mini Kepçe Kırsal Alan Çalışması",
     credit: "Mini Kepçe Hizmetleri"
   }
 ];
